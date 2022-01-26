@@ -28,8 +28,9 @@ dmenu: dmenu.o drw.o util.o
 stest: stest.o
 	$(CC) -o $@ stest.o $(LDFLAGS)
 
+# automatically remove config.h
 clean:
-	rm -f dmenu stest $(OBJ) dmenu-$(VERSION).tar.gz
+	rm -f config.h dmenu stest $(OBJ) dmenu-$(VERSION).tar.gz
 
 dist: clean
 	mkdir -p dmenu-$(VERSION)
